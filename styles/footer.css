@@ -1,0 +1,67 @@
+/* Footer Styles */
+.page_footer {
+    background-color: #f8f9fa; /* Light background color */
+    padding: 40px 0; /* Add padding */
+    color: #333; /* Text color */
+    width: 100%; /* Full width */
+    position: relative; /* Ensure it's not fixed or absolute */
+    bottom: 0; /* Stick to the bottom */
+    left: 0; /* Align to the left */
+    z-index: 1; /* Ensure it's above other content */
+}
+
+.page_footer .container {
+    max-width: 1200px; /* Limit container width */
+    margin: 0 auto; /* Center the container */
+    padding: 0 15px; /* Add padding */
+}
+
+.page_footer .widget_text .logo img {
+    max-width: 100px; /* Limit logo size */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.page_footer .widget_text .logo-text {
+    font-size: 1.5rem; /* Logo text size */
+    font-weight: bold; /* Bold text */
+    color: #2c3e50; /* Logo text color */
+}
+
+.page_footer .widget_working_hours h3,
+.page_footer .widget_icons_list h3,
+.page_footer .widget_links h3 {
+    font-size: 1.25rem; /* Section title size */
+    font-weight: 600; /* Semi-bold text */
+    margin-bottom: 1.5rem; /* Add space below title */
+    color: #2c3e50; /* Section title color */
+}
+
+.page_footer .widget_working_hours ul,
+.page_footer .widget_links ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+}
+
+.page_footer .widget_working_hours ul li,
+.page_footer .widget_links ul li {
+    margin-bottom: 0.75rem; /* Add space between list items */
+}
+
+.page_footer .widget_icons_list .media {
+    margin-bottom: 1rem; /* Add space between media items */
+}
+
+.page_footer .widget_icons_list .icon-styled {
+    font-size: 1.25rem; /* Icon size */
+    color: #2c3e50; /* Icon color */
+}
+
+.page_footer .widget_links a {
+    color: #333; /* Link color */
+    text-decoration: none; /* Remove underline */
+}
+
+.page_footer .widget_links a:hover {
+    color: #2c3e50; /* Hover color */
+    text-decoration: underline; /* Add underline on hover */
+}

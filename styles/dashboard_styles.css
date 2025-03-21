@@ -1,0 +1,83 @@
+/* General Styles */
+body.bg-gradient {
+    background: linear-gradient(to bottom right, #A8D8FF, #A8D9B8);
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.dashboard-container {
+    margin-top: 50px;
+}
+
+.card {
+    border: none;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: white;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-title {
+    color: #1e3a8a;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.card-text {
+    color: #6c757d;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    font-size: 1.1rem;
+    padding: 0.75rem 2rem;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* Animations */
+.animate__animated {
+    animation-duration: 1s;
+}
+
+.widget_text p {
+    color: #6c757d;
+}
+
+.widget_working_hours ul {
+    list-style: none;
+    padding: 0;
+}
+
+.widget_working_hours ul li {
+    margin-bottom: 10px;
+}
+
+.widget_icons_list .media {
+    margin-bottom: 10px;
+}
+
+.widget_links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.widget_links ul li {
+    margin-bottom: 10px;
+}

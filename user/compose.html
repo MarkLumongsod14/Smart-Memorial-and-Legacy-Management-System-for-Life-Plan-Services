@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compose Message</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="styles/compose.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Compose a Scheduled Message</h2>
+        <form action="save_message.php" method="POST">
+            
+            <!-- Recipient Name -->
+            <label for="recipient_name">Recipient Name:</label>
+            <div class="position-relative">
+                <input type="text" id="recipient_name" name="recipient_name" required class="form-control">
+                <div class="recipient-dropdown" id="recipientDropdown"></div> <!-- Auto Dropdown -->
+            </div>
+
+            <!-- Recipient Email -->
+            <label for="recipient">Recipient Email:</label>
+            <input type="email" id="recipient" name="recipient" required class="form-control">
+
+            <!-- Subject -->
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject" required class="form-control">
+
+            <!-- Message -->
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" required class="form-control"></textarea>
+
+            <!-- Send Date -->
+            <label for="send_date">Send Date:</label>
+            <input type="datetime-local" id="send_date" name="send_date" required class="form-control">
+
+            <!-- Message Type -->
+            <label for="message_type">Message Type:</label>
+            <select id="message_type" name="message_type" class="form-control">
+                <option value="email">Email</option>
+                <option value="sms">SMS</option>
+            </select>
+
+            <!-- Recipient Phone -->
+            <label for="recipient_phone">Recipient Phone:</label>
+            <input type="tel" id="recipient_phone" name="recipient_phone" class="form-control">
+
+            <button type="submit" class="btn btn-primary mt-3">Schedule Message</button>
+        </form>
+
+        <a href="dashboard.php" class="btn btn-secondary mt-2">Back to Dashboard</a>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const recipientNameInput = document.getElementById("recipient_name");
+            const dropdown = document.getElementById("recipientDropdown");
+
+            // Fetch recipients from database
+            function fetchRecipients() {
+                fetch("fetch_recipients.php")
+                    .then(response => response.json())
+                    .then(data => {
+                        dropdown.innerHTML = ""; // Clear existing list
+                        if (data.length === 0) {
+                            dropdown.innerHTML = "<div class='text-center'>No saved recipients</div>";
+                        } else {
+                            data.forEach(recipient => {
+                                const div = document.createElement("div");
+                                div.textContent = `${recipient.name} (${recipient.email})`;
+                                div.addEventListener("click", function () {
+                                    recipientNameInput.value = recipient.name;
+                                    document.getElementById("recipient").value = recipient.email;
+                                    document.getElementById("recipient_phone").value = recipient.phone || "";
+                                    dropdown.style.display = "none"; // Hide dropdown after selection
+                                });
+                                dropdown.appendChild(div);
+                            });
+                        }
+                        dropdown.style.display = "block"; // Show dropdown
+                    });
+            }
+
+            // Show dropdown when clicking on recipient name input
+            recipientNameInput.addEventListener("focus", fetchRecipients);
+
+            // Hide dropdown when clicking outside
+            document.addEventListener("click", function (event) {
+                if (!recipientNameInput.contains(event.target) && !dropdown.contains(event.target)) {
+                    dropdown.style.display = "none";
+                }
+            });
+        });
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+</body>
+</html>

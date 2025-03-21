@@ -1,0 +1,19 @@
+{
+    "name": "t2pc5/deadman",
+    "autoload": {
+        "psr-4": {
+            "T2pc5\\Deadman\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "John Doe",
+            "email": "johndoe@example.com"
+        }
+    ],
+    "require": {
+        "getbrevo/brevo-php": "^2.0",
+        "guzzlehttp/guzzle": "^7.9",
+        "brevo/brevo-php": "^1.0"
+    }
+}

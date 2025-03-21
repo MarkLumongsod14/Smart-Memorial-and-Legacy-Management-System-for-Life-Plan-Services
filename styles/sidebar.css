@@ -1,0 +1,72 @@
+/* Floating Sidebar Styles */
+.sidebar {
+    width: 80px; /* Default collapsed width */
+    background-color: #2b8b97; /* Sidebar background color */
+    padding: 20px 10px;
+    position: fixed;
+    top: 50%;
+    right: -80px; /* Start off-screen */
+    transform: translateY(-50%); /* Center vertically */
+    transition: right 0.3s ease-in-out, width 0.3s ease-in-out;
+    z-index: 1000;
+    border-radius: 10px 0 0 10px; /* Rounded corners on the left */
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.sidebar a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    padding: 15px 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: #34495e; /* Hover background color */
+    transform: translateX(-5px); /* Slight hover effect */
+}
+
+.sidebar a i {
+    font-size: 20px;
+    width: 30px;
+    text-align: center;
+}
+
+.sidebar a span {
+    display: none; /* Hide text by default */
+    margin-left: 10px;
+    font-size: 16px;
+}
+
+/* Show Sidebar */
+.sidebar.collapsed {
+    right: 0; /* Bring sidebar on-screen */
+    width: 250px; /* Expanded width */
+}
+
+.sidebar.collapsed a span {
+    display: inline; /* Show text when expanded */
+}
+
+/* Toggle Button */
+.toggle-btn {
+    font-size: 24px;
+    cursor: pointer;
+    background-color: #2b8b97;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1001;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.toggle-btn:hover {
+    background-color: #34495e; /* Hover background color */
+}

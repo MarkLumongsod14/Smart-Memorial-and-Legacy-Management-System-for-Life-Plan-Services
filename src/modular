@@ -1,0 +1,17 @@
+documentation
+        -impliment modular approach in programming
+            -create proper functionalities and directories.
+                - create proper CTA ("Call to Action")
+                    - user can add delete and update the user profile and make sure that it's inline with the database
+
+
+
+Considerations
+    -if the code exceeds 1080 lines make sure to make a new file.
+        -what if the user exceeds the limit of form retakes.
+            ("the user is limited to create a 1 account")
+        - stricl implimentation of 1 user 1 account policy.
+
+
+limitations
+    -the amount of user's per minute is strictly

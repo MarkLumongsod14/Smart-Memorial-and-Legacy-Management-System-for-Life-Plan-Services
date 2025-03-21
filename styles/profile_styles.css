@@ -1,0 +1,149 @@
+/* Smooth Gradient Background */
+body.bg-gradient {
+    background: linear-gradient(to bottom right, #A8D8FF, #A8D9B8);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Profile Header */
+.profile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.profile-header h2 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.profile-header .profile-info p {
+    font-size: 16px;
+    color: #777;
+}
+
+.profile-picture {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 5px solid #4caf50;
+    object-fit: cover;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 20;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Input fields in modal */
+input[type="text"], input[type="email"] {
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    margin: 10px 0;
+    background-color: #f9f9f9;
+}
+
+button.submit {
+    padding: 10px 15px;
+    border-radius: 8px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+button.submit:hover {
+    background-color: #81c784;
+}
+
+/* Profile Content Wrapper */
+.profile-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.account-info, .cards-section {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.account-info h3, .card h3 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.card {
+    margin-bottom: 20px;
+}
+
+.card ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.card li {
+    padding: 5px 0;
+    font-size: 16px;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+th {
+    font-weight: 600;
+    color: #4A4A4A;
+}
+
+td {
+    color: #666;
+}

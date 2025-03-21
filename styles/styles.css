@@ -1,0 +1,120 @@
+/* General Page Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom right, #A8D8FF, #A8D9B8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Centering Containers */
+.login-container, .register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* Common Card Styling */
+.login-card, .register-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    text-align: center;
+}
+
+/* Title & Subtitle */
+.login-title, .register-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.login-subtitle, .register-subtitle {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+/* Input Fields */
+.input-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.input-group i {
+    position: absolute;
+    left: 12px;
+    color: #666;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 12px 12px 40px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #0ed2f7;
+    outline: none;
+    box-shadow: 0 0 5px rgba(14, 210, 247, 0.5);
+}
+
+/* Checkbox Group */
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    font-size: 0.9rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.checkbox-group input {
+    margin-right: 8px;
+}
+
+/* Buttons */
+.login-btn, .register-btn {
+    width: 100%;
+    background: #0ed2f7;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-btn:hover, .register-btn:hover {
+    background: #0bbdd9;
+}
+
+/* Links */
+.login-text, .register-text {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.login-text a, .register-text a {
+    color: #0ed2f7;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-text a:hover, .register-text a:hover {
+    text-decoration: underline;
+}

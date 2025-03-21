@@ -1,0 +1,235 @@
+/* Smooth Gradient Background */
+body.bg-gradient {
+    background: linear-gradient(to bottom right, #A8D8FF, #A8D9B8);
+    animation: fadeIn 1s ease-in-out;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 1200px;
+    flex: 1;
+}
+
+.card {
+    transition: all 0.3s ease-in-out;
+    border-radius: 15px;
+    overflow: hidden;
+    backdrop-filter: blur(15px);
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.card img {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-body {
+    flex-grow: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #205a50; /* Dark teal for card titles */
+    margin-bottom: 10px;
+}
+
+.card-text {
+    font-size: 16px;
+    color: #333; /* Darker text for readability */
+    margin-bottom: 15px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+/* Buttons */
+button {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+}
+
+.view-details {
+    background: linear-gradient(135deg, #1e3a8a, #152c5b); /* Primary color gradient */
+    color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.view-details:hover {
+    background: linear-gradient(135deg, #152c5b, #1e3a8a); /* Reverse gradient on hover */
+    transform: scale(1.05);
+}
+
+.buy-now {
+    background: linear-gradient(135deg, #4CAF50, #2E7D32); /* Green gradient */
+    color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.buy-now:hover {
+    background: linear-gradient(135deg, #2E7D32, #4CAF50); /* Reverse gradient on hover */
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+/* Payment Options List */
+.list-group-item {
+    background: rgba(255, 255, 255, 0.5);
+    border: none;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.list-group-item:hover {
+    background: #1e3a8a;
+    color: white;
+}
+
+/* Benefits Section */
+.benefit-box {
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.benefit-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Testimonials Section */
+.testimonial-box {
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.testimonial-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.close {
+    float: right;
+    font-size: 24px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close:hover {
+    color: #000;
+}
+
+
+/* Scrollable Container */
+.scrollable-container {
+    max-height: 80vh;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+.scrollable-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.scrollable-container::-webkit-scrollbar-thumb {
+    background-color: rgba(107, 193, 168, 0.7);
+    border-radius: 10px;
+}
+
+.scrollable-container::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.3);
+}h1, h2 {
+    color: #1e3a8a; /* Primary color for headings */
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 20px;
+    
+}
+.payment-options .card, .benefits .card {
+    transition: transform 0.3s ease-in-out;
+}
+.payment-options .card:hover, .benefits .card:hover {
+    transform: scale(1.05);
+}
+.accordion-button {
+    background-color: #f8f9fa;
+    font-weight: bold;
+}
+.accordion-button:hover {
+    background-color: #e2e6ea;
+}
+.testimonial-box {
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+

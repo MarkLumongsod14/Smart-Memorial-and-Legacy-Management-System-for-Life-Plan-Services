@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | Memorial Life Plan</title>
+    <link rel="stylesheet" href="styles/styles.css"> <!-- Link to your external CSS -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> <!-- Icons -->
+</head>
+<body>
+
+    <div class="register-container">
+        <div class="register-card">
+            <h2 class="register-title">Create Your Account</h2>
+            <p class="register-subtitle">Join us today!</p>
+
+            <form action="register.php" method="POST">
+                <!-- Full Name Input -->
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" name="name" placeholder="Full Name" required>
+                </div>
+
+                <!-- Email Input -->
+                <div class="input-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" name="email" placeholder="Email Address" required>
+                </div>
+
+                <!-- Password Input -->
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" name="password" placeholder="Password" required>
+                </div>
+
+                <!-- Register as Admin Checkbox -->
+                <div class="checkbox-group">
+                    <input type="checkbox" name="is_admin" id="is_admin">
+                    <label for="is_admin">Register as Admin</label>
+                </div>
+
+                <!-- Register Button -->
+                <button type="submit" class="register-btn">Register</button>
+            </form>
+
+            <p class="login-text">Already have an account? <a href="index.html">Login here</a></p>
+        </div>
+    </div>
+
+</body>
+</html>

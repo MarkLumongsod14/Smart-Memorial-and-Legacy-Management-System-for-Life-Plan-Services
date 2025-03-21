@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Memorial Life Plan</title>
+    <link rel="stylesheet" href="styles/styles.css"> <!-- Link to your CSS file -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> <!-- Icons -->
+</head>
+<body>
+
+    <div class="login-container">
+        <div class="login-card">
+            <h2 class="login-title">Welcome Back</h2>
+            <p class="login-subtitle">Sign in to continue</p>
+
+            <form action="login.php" method="POST">
+                <!-- Email Input -->
+                <div class="input-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="email" name="email" placeholder="Email Address" required>
+                </div>
+
+                <!-- Password Input -->
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="password" name="password" placeholder="Password" required>
+                </div>
+
+                <div class="forgot-password">
+                    <a href="#">Forgot Password?</a>
+                </div>
+
+                <!-- Login Button -->
+                <button type="submit" class="login-btn">Login</button>
+            </form>
+
+            <p class="register-text">Don't have an account? <a href="register.html">Register here</a></p>
+        </div>
+    </div>
+
+</body>
+</html>
